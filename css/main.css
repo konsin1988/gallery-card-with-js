@@ -1,6 +1,47 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    user-select: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+section {
+  background: rgb(35, 35, 57);
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+section > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  position: absolute;
+  padding: 20px 130px;
+  inset: 0;
+}
+section .image {
+  position: relative;
+  height: 90%;
+  width: 40px;
+  flex: 1;
+  overflow: hidden;
+  border-radius: 20px;
+  margin: 30px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+section .image:hover {
+  border: 3px double #fff;
+}
+img {
+  position: absolute;
+  inset: 0;
+  height: 90vh;
+}
+section div .active {
+  flex: 8;
 }
