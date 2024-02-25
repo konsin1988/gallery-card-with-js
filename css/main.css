@@ -34,14 +34,38 @@ section .image {
   cursor: pointer;
   transition: all 0.3s;
 }
-section .image:hover {
-  border: 3px double #fff;
+@media screen and (orientation: portrait) {
+  section .image {
+    height: 50%;
+  }
+}
+section img:hover {
+  filter: opacity(0.7);
 }
 img {
   position: absolute;
   inset: 0;
   height: 90vh;
 }
+section .image:active {
+  transform: scale(0.95);
+  transition: all 0.3s;
+}
 section div .active {
   flex: 8;
+}
+section div .active img {
+  filter: opacity(1);
+}
+
+@media screen and (max-width: 800px) {
+  section > div {
+    padding: 0;
+  }
+  section .image {
+    height: 40%;
+  }
+  img {
+    height: 50vh;
+  }
 }
